@@ -65,3 +65,10 @@ model VerificationToken {
 
     @@unique([identifier, token])
 }
+// we can add a ? if its not required
+model Todo {
+    id String @id @default (cuid())
+    createdAt DateTime @default(now())
+    updatedAt DateTime @default(now())
+    test String
+}
